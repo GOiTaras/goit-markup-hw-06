@@ -537,6 +537,44 @@ flex-grow: 0;
     fill: var(--button-background);
 }
 
+.footer-form {
+    margin-left: 80px;
+}
+
+.footer-form-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    margin-bottom: 16px;
+}
+
+.footer-subscribe {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-subscribe-input {
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: #2E2F42;;
+}
+
+.footer-subscribe-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    background: #4D5AE5;
+    border-radius: 4px;gap: 16px;
+}
+
 /*-----PortfolioPage-----*/
 
 /*-----EXAMPLES------*/
