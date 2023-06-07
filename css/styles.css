@@ -215,8 +215,7 @@ img {
     gap: 10px;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     transition: background-color var(--transition-hover-timing)
 }
 
@@ -559,20 +558,26 @@ flex-grow: 0;
     width: 264px;
     height: 40px;
     padding: 8px 16px;
+    border: none;
     border: 1px solid #FFFFFF;
     border-radius: 4px;
     background-color: #2E2F42;;
 }
 
 .footer-subscribe-btn {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
+    width: 165px;
+    height: 40px;
     background: #4D5AE5;
-    border-radius: 4px;gap: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    padding: 8px 24px;
+}
+
+.submit-icon {
+    display: block;
 }
 
 /*-----PortfolioPage-----*/
