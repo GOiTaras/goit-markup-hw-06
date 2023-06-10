@@ -852,12 +852,16 @@ flex-grow: 0;
     color: #8E8F99;
 }
 
-.fake-checkbox {
+.checkbox-label span {
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    margin-right: 8px;
+    margin-right: 8px
+}
+
+.check-icon {
+    fill: transparent;
 }
 
 .privacy-check:checked + .checkbox-label span {
