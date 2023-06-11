@@ -13,6 +13,8 @@
     --btn-border-hover: 1px solid transparent;
     --icon-color: #8E8F99;
     --transition-hover-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --helper-text-color: #8E8F99;
+    --link-color: #4d5ae5;
 } 
 
 body {
@@ -211,7 +213,6 @@ img {
     letter-spacing: 0.04em;
     color: #FFFFFF;
     background-color: #4D5AE5;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 16px 32px;
     gap: 10px;
     border-radius: 4px;
@@ -561,7 +562,7 @@ flex-grow: 0;
 
 .footer-subscribe-input {
     font-size: 12px;
-    line-height: 2;
+    line-height: 1.5;
     align-items: center;
     letter-spacing: 0.04em;
     color: var(--white-color);
@@ -570,7 +571,8 @@ flex-grow: 0;
     outline: none;
     border: 1px solid var(--white-color);
     border-radius: 4px;
-    background-color: #2E2F42;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: transparent;
     padding: 8px 16px;
 }
 
@@ -580,7 +582,6 @@ flex-grow: 0;
     justify-content: center;
     align-items: center;
     padding: 8px 24px;
-    gap: 16px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -594,7 +595,6 @@ flex-grow: 0;
     background-color: #4D5AE5;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color var(--transition-hover-timing);
 }
 
@@ -605,6 +605,7 @@ flex-grow: 0;
 
 .footer-subscribe-icon {
     fill: var(--white-color);
+    margin-left: 16px;
 }
 
 /*-----PortfolioPage-----*/
@@ -804,9 +805,9 @@ flex-grow: 0;
 
 .modal-input-label {
     font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: #8E8F99;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--helper-text-color);
     display: block;
     margin-bottom: 4px;
 }
@@ -822,16 +823,14 @@ flex-grow: 0;
     outline: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    padding: 11px 38px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent;
     transition: border-color var(--transition-hover-timing);
 }
 
 .modal-input:focus {
     border-color: #4D5AE5;
-}
-
-.modal-input:focus+svg {
-    fill: #4D5AE5;
 }
 
 .modal-input-icon {
@@ -843,15 +842,27 @@ flex-grow: 0;
     transition: fill var(--transition-hover-timing)
 }
 
+.modal-input:focus+svg {
+    fill: #4D5AE5;
+}
+
+.comment-input-field {
+    margin-bottom: 16px;
+}
+
 .modal-comment {
-    resize: none;
     width: 100%;
     height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     outline: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     padding: 8px 16px;
-    margin-bottom: 16px;
+    outline: transparent;
+    resize: none;
     transition: border-color var(--transition-hover-timing);
 }
 
@@ -867,7 +878,6 @@ flex-grow: 0;
 }
 
 .checkbox-field {
-    display: flex;
     margin-bottom: 24px;
 }
 
@@ -877,36 +887,35 @@ flex-grow: 0;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: #8E8F99;
+    color: var(--helper-text-color);
 }
 
 .fake-checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.checkbox-label .fake-checkbox {
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     margin-right: 8px;
     fill: transparent;
-    transition: fill var(--transition-hover-timing), background-color var(--transition-hover-timing), border-color var(--transition-hover-timing);
+    transition: fill var(--transition-hover-timing), background-color var(--transition-hover-timing), border var(--transition-hover-timing);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.privacy-check:checked + .checkbox-label > .fake-checkbox {
-    background-color: #404BBF;
-    border-color: #404BBF;
+.privacy-check:checked + .checkbox-label > span {
+    background-color: var(--link-hover-color);
+    border: none;
     fill: var(--button-background);
 }
 
 .privacy-link {
-    color: #4D5AE5;
+    color: var(--link-color);
 }
 
 .btn-send {
+    min-width: 169px;
+    height: 56px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -914,14 +923,11 @@ flex-grow: 0;
     display: block;
     letter-spacing: 0.04em;
     color: var(--white-color);
-    min-width: 169px;
-    height: 56px;
     padding: 16px 32px;
     border: none;
     margin: 0 auto;
     cursor: pointer;
     background-color: #4D5AE5;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     transition: background-color var(--transition-hover-timing);
 }
