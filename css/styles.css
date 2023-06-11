@@ -920,7 +920,13 @@ flex-grow: 0;
     border: none;
     margin: 0 auto;
     cursor: pointer;
-    background: #4D5AE5;
+    background-color: #4D5AE5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    transition: background-color var(--transition-hover-timing);
+}
+
+.btn-send:hover,
+.btn-send:focus {
+    background-color: #404BBF;
 }
