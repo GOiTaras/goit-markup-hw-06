@@ -803,6 +803,10 @@ flex-grow: 0;
     margin-bottom: 16px;
 }
 
+.modal-input-field {
+    margin-bottom: 8px;
+}
+
 .modal-input-label {
     font-size: 12px;
     line-height: 1.17;
@@ -814,7 +818,7 @@ flex-grow: 0;
 
 .input-field {
     position: relative;
-    margin-bottom: 8px;
+
 }
 
 .modal-input {
@@ -857,6 +861,7 @@ flex-grow: 0;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
     outline: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
@@ -882,8 +887,6 @@ flex-grow: 0;
 }
 
 .checkbox-label {
-    display: flex;
-    align-items: center;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
